@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<solucion instancia="R203-25" modelo="mE-VRPTW">
+  <costo_total>467.8</costo_total>
+  <rutas total="6">
+    <ruta id="3">
+      <secuencia>0,6,5,17,16,14,13,26</secuencia>
+      <arcos total="7">8,222,204,543,519,462,450</arcos>
+      <salida_deposito>580</salida_deposito>
+      <energia_salida>1487</energia_salida>
+      <periodos_carga primero="0" ultimo="88" total="89"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>0,2,15,23,22,21,26</secuencia>
+      <arcos total="6">2,104,501,716,698,679</arcos>
+      <salida_deposito>184</salida_deposito>
+      <energia_salida>1439</energia_salida>
+      <periodos_carga primero="0" ultimo="83" total="84"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>0,1,26</secuencia>
+      <arcos total="2">0,81</arcos>
+      <salida_deposito>820</salida_deposito>
+      <energia_salida>557</energia_salida>
+      <periodos_carga primero="0" ultimo="30" total="31"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>0,4,25,24,12,26</secuencia>
+      <arcos total="5">5,176,762,742,419</arcos>
+      <salida_deposito>92</salida_deposito>
+      <energia_salida>1363</energia_salida>
+      <periodos_carga primero="0" ultimo="75" total="76"/>
+    </ruta>
+    <ruta id="13">
+      <secuencia>0,7,11,19,8,18,26</secuencia>
+      <arcos total="6">10,267,372,602,305,592</arcos>
+      <salida_deposito>281</salida_deposito>
+      <energia_salida>1516</energia_salida>
+      <periodos_carga primero="0" ultimo="91" total="92"/>
+    </ruta>
+    <ruta id="15">
+      <secuencia>0,3,9,20,10,26</secuencia>
+      <arcos total="5">3,139,328,629,355</arcos>
+      <salida_deposito>445</salida_deposito>
+      <energia_salida>1506</energia_salida>
+      <periodos_carga primero="0" ultimo="90" total="91"/>
+    </ruta>
+  </rutas>
+</solucion>
