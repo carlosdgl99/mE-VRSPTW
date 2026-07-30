@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<solucion instancia="C106-50" modelo="mE-VRPTW">
+  <costo_total>431.8</costo_total>
+  <rutas total="6">
+    <ruta id="3">
+      <secuencia>0,43,42,41,40,44,46,45,48,50,49,47,51</secuencia>
+      <arcos total="12">76,1712,1638,1563,1511,1758,1822,1790,1851,1862,1854,1831</arcos>
+      <salida_deposito>170</salida_deposito>
+      <energia_salida>971</energia_salida>
+      <periodos_carga primero="0" ultimo="53" total="54"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>0,13,17,18,19,15,16,14,12,51</secuencia>
+      <arcos total="9">22,534,660,707,743,603,624,578,505</arcos>
+      <salida_deposito>100</salida_deposito>
+      <energia_salida>1540</energia_salida>
+      <periodos_carga primero="0" ultimo="99" total="100"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>0,25,27,29,30,28,26,23,22,21,51</secuencia>
+      <arcos total="10">41,965,1046,1125,1166,1089,1009,858,847,844</arcos>
+      <salida_deposito>252</salida_deposito>
+      <energia_salida>773</energia_salida>
+      <periodos_carga primero="0" ultimo="42" total="43"/>
+    </ruta>
+    <ruta id="9">
+      <secuencia>0,5,3,7,8,10,11,9,6,4,2,1,51</secuencia>
+      <arcos total="12">8,188,110,291,346,425,466,391,265,171,96,94</arcos>
+      <salida_deposito>137</salida_deposito>
+      <energia_salida>1007</energia_salida>
+      <periodos_carga primero="0" ultimo="55" total="56"/>
+    </ruta>
+    <ruta id="13">
+      <secuencia>0,24,33,51</secuencia>
+      <arcos total="3">40,907,1332</arcos>
+      <salida_deposito>202</salida_deposito>
+      <energia_salida>1133</energia_salida>
+      <periodos_carga primero="0" ultimo="62" total="63"/>
+    </ruta>
+    <ruta id="14">
+      <secuencia>0,20,32,31,35,37,38,39,36,34,51</secuencia>
+      <arcos total="10">33,805,1246,1200,1361,1412,1440,1463,1389,1349</arcos>
+      <salida_deposito>86</salida_deposito>
+      <energia_salida>1392</energia_salida>
+      <periodos_carga primero="0" ultimo="78" total="79"/>
+    </ruta>
+  </rutas>
+</solucion>

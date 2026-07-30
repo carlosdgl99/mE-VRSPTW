@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<solucion instancia="R206-25" modelo="mE-VRPTW">
+  <costo_total>507.4</costo_total>
+  <rutas total="7">
+    <ruta id="1">
+      <secuencia>0,5,17,7,26</secuencia>
+      <arcos total="4">6,201,528,280</arcos>
+      <salida_deposito>516</salida_deposito>
+      <energia_salida>1363</energia_salida>
+      <periodos_carga primero="0" ultimo="75" total="76"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>0,18,8,19,11,10,26</secuencia>
+      <arcos total="6">28,550,302,587,364,353</arcos>
+      <salida_deposito>266</salida_deposito>
+      <energia_salida>1529</energia_salida>
+      <periodos_carga primero="0" ultimo="95" total="96"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>0,2,15,14,16,6,26</secuencia>
+      <arcos total="6">2,104,484,457,502,245</arcos>
+      <salida_deposito>329</salida_deposito>
+      <energia_salida>1439</energia_salida>
+      <periodos_carga primero="0" ultimo="83" total="84"/>
+    </ruta>
+    <ruta id="11">
+      <secuencia>0,3,9,20,1,26</secuencia>
+      <arcos total="5">3,139,323,599,81</arcos>
+      <salida_deposito>630</salida_deposito>
+      <energia_salida>1331</energia_salida>
+      <periodos_carga primero="0" ultimo="73" total="74"/>
+    </ruta>
+    <ruta id="12">
+      <secuencia>0,12,24,25,4,26</secuencia>
+      <arcos total="5">18,415,722,729,174</arcos>
+      <salida_deposito>899</salida_deposito>
+      <energia_salida>1187</energia_salida>
+      <periodos_carga primero="0" ultimo="65" total="66"/>
+    </ruta>
+    <ruta id="14">
+      <secuencia>0,21,23,22,26</secuencia>
+      <arcos total="4">33,653,696,682</arcos>
+      <salida_deposito>372</salida_deposito>
+      <energia_salida>1295</energia_salida>
+      <periodos_carga primero="0" ultimo="71" total="72"/>
+    </ruta>
+    <ruta id="15">
+      <secuencia>0,13,26</secuencia>
+      <arcos total="2">19,442</arcos>
+      <salida_deposito>578</salida_deposito>
+      <energia_salida>395</energia_salida>
+      <periodos_carga primero="0" ultimo="21" total="22"/>
+    </ruta>
+  </rutas>
+</solucion>

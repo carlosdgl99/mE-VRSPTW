@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<solucion instancia="C201-50" modelo="mE-VRPTW">
+  <costo_total>532.0</costo_total>
+  <rutas total="6">
+    <ruta id="4">
+      <secuencia>0,5,2,1,7,3,4,51</secuencia>
+      <arcos total="7">6,226,125,92,367,189,224</arcos>
+      <salida_deposito>293</salida_deposito>
+      <energia_salida>1506</energia_salida>
+      <periodos_carga primero="0" ultimo="90" total="91"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>0,49,40,44,46,45,50,47,43,42,41,48,51</secuencia>
+      <arcos total="12">86,1696,1536,1605,1657,1636,1730,1679,1583,1566,1555,1687</arcos>
+      <salida_deposito>1220</salida_deposito>
+      <energia_salida>1600</energia_salida>
+      <periodos_carga primero="0" ultimo="122" total="123"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>0,22,30,29,28,26,21,51</secuencia>
+      <arcos total="7">35,725,1163,1087,1039,922,676</arcos>
+      <salida_deposito>293</salida_deposito>
+      <energia_salida>1521</energia_salida>
+      <periodos_carga primero="0" ultimo="92" total="93"/>
+    </ruta>
+    <ruta id="9">
+      <secuencia>0,6,32,33,31,35,37,38,39,36,34,51</secuencia>
+      <arcos total="11">8,331,1256,1298,1213,1374,1443,1474,1505,1410,1364</arcos>
+      <salida_deposito>472</salida_deposito>
+      <energia_salida>1588</energia_salida>
+      <periodos_carga primero="0" ultimo="117" total="118"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>0,16,14,12,15,13,25,51</secuencia>
+      <arcos total="7">27,521,483,447,500,465,905</arcos>
+      <salida_deposito>2177</salida_deposito>
+      <energia_salida>1526</energia_salida>
+      <periodos_carga primero="0" ultimo="94" total="95"/>
+    </ruta>
+    <ruta id="15">
+      <secuencia>0,20,24,27,23,18,19,17,9,11,10,8,51</secuencia>
+      <arcos total="12">32,626,845,974,785,563,581,532,403,428,417,397</arcos>
+      <salida_deposito>284</salida_deposito>
+      <energia_salida>1516</energia_salida>
+      <periodos_carga primero="0" ultimo="91" total="92"/>
+    </ruta>
+  </rutas>
+</solucion>

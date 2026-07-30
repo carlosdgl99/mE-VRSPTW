@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<solucion instancia="C101-50" modelo="mE-VRPTW">
+  <costo_total>432.2</costo_total>
+  <rutas total="7">
+    <ruta id="2">
+      <secuencia>0,13,17,18,19,15,16,14,12,51</secuencia>
+      <arcos total="9">22,513,638,686,722,579,601,554,486</arcos>
+      <salida_deposito>145</salida_deposito>
+      <energia_salida>1506</energia_salida>
+      <periodos_carga primero="0" ultimo="90" total="91"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>0,41,40,44,46,45,48,50,49,47,51</secuencia>
+      <arcos total="10">72,1510,1458,1693,1754,1722,1778,1788,1781,1762</arcos>
+      <salida_deposito>256</salida_deposito>
+      <energia_salida>953</energia_salida>
+      <periodos_carga primero="0" ultimo="52" total="53"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>0,43,42,51</secuencia>
+      <arcos total="3">76,1647,1588</arcos>
+      <salida_deposito>163</salida_deposito>
+      <energia_salida>665</energia_salida>
+      <periodos_carga primero="0" ultimo="36" total="37"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>0,24,25,27,29,30,28,26,23,22,21,51</secuencia>
+      <arcos total="11">40,871,933,1011,1090,1131,1054,976,833,823,820</arcos>
+      <salida_deposito>235</salida_deposito>
+      <energia_salida>737</energia_salida>
+      <periodos_carga primero="0" ultimo="40" total="41"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>0,32,33,31,35,37,38,39,36,34,51</secuencia>
+      <arcos total="10">54,1212,1261,1166,1317,1365,1393,1413,1342,1304</arcos>
+      <salida_deposito>142</salida_deposito>
+      <energia_salida>1588</energia_salida>
+      <periodos_carga primero="0" ultimo="117" total="118"/>
+    </ruta>
+    <ruta id="9">
+      <secuencia>0,5,3,7,8,10,11,9,6,4,2,1,51</secuencia>
+      <arcos total="12">9,182,110,275,330,406,447,375,255,167,96,94</arcos>
+      <salida_deposito>143</salida_deposito>
+      <energia_salida>953</energia_salida>
+      <periodos_carga primero="0" ultimo="52" total="53"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>0,20,51</secuencia>
+      <arcos total="2">33,816</arcos>
+      <salida_deposito>175</salida_deposito>
+      <energia_salida>323</energia_salida>
+      <periodos_carga primero="0" ultimo="17" total="18"/>
+    </ruta>
+  </rutas>
+</solucion>
