@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<solucion instancia="RC107-25.xml_solucion" modelo="mE-VRPTW">
+  <costo_total>363.7</costo_total>
+  <rutas total="4">
+    <ruta id="2">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>6</nodo>
+        <nodo>7</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>183</salida_deposito>
+      <energia_salida>1313</energia_salida>
+      <periodos_carga primero="0" ultimo="72" total="73"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>2</nodo>
+        <nodo>4</nodo>
+        <nodo>8</nodo>
+        <nodo>5</nodo>
+        <nodo>3</nodo>
+        <nodo>1</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>158</salida_deposito>
+      <energia_salida>1542</energia_salida>
+      <periodos_carga primero="0" ultimo="100" total="101"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>22</nodo>
+        <nodo>19</nodo>
+        <nodo>18</nodo>
+        <nodo>21</nodo>
+        <nodo>23</nodo>
+        <nodo>25</nodo>
+        <nodo>24</nodo>
+        <nodo>20</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>114</salida_deposito>
+      <energia_salida>1577</energia_salida>
+      <periodos_carga primero="0" ultimo="113" total="114"/>
+    </ruta>
+    <ruta id="14">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>12</nodo>
+        <nodo>14</nodo>
+        <nodo>17</nodo>
+        <nodo>16</nodo>
+        <nodo>15</nodo>
+        <nodo>13</nodo>
+        <nodo>9</nodo>
+        <nodo>11</nodo>
+        <nodo>10</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>122</salida_deposito>
+      <energia_salida>1585</energia_salida>
+      <periodos_carga primero="0" ultimo="116" total="117"/>
+    </ruta>
+  </rutas>
+</solucion>

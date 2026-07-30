@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<solucion instancia="R101-25.xml_solucion" modelo="mE-VRPTW">
+  <costo_total>669.0</costo_total>
+  <rutas total="10">
+    <ruta id="2">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>23</nodo>
+        <nodo>22</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>166</salida_deposito>
+      <energia_salida>1295</energia_salida>
+      <periodos_carga primero="0" ultimo="71" total="72"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>3</nodo>
+        <nodo>24</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>208</salida_deposito>
+      <energia_salida>1025</energia_salida>
+      <periodos_carga primero="0" ultimo="56" total="57"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>12</nodo>
+        <nodo>9</nodo>
+        <nodo>20</nodo>
+        <nodo>1</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>173</salida_deposito>
+      <energia_salida>1382</energia_salida>
+      <periodos_carga primero="0" ultimo="77" total="78"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>7</nodo>
+        <nodo>8</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>180</salida_deposito>
+      <energia_salida>1043</energia_salida>
+      <periodos_carga primero="0" ultimo="57" total="58"/>
+    </ruta>
+    <ruta id="9">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>18</nodo>
+        <nodo>6</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>195</salida_deposito>
+      <energia_salida>665</energia_salida>
+      <periodos_carga primero="0" ultimo="36" total="37"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>5</nodo>
+        <nodo>16</nodo>
+        <nodo>17</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>137</salida_deposito>
+      <energia_salida>1295</energia_salida>
+      <periodos_carga primero="0" ultimo="71" total="72"/>
+    </ruta>
+    <ruta id="11">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>4</nodo>
+        <nodo>25</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>257</salida_deposito>
+      <energia_salida>1151</energia_salida>
+      <periodos_carga primero="0" ultimo="63" total="64"/>
+    </ruta>
+    <ruta id="12">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>11</nodo>
+        <nodo>19</nodo>
+        <nodo>10</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>148</salida_deposito>
+      <energia_salida>1349</energia_salida>
+      <periodos_carga primero="0" ultimo="74" total="75"/>
+    </ruta>
+    <ruta id="13">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>14</nodo>
+        <nodo>15</nodo>
+        <nodo>13</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>134</salida_deposito>
+      <energia_salida>1295</energia_salida>
+      <periodos_carga primero="0" ultimo="71" total="72"/>
+    </ruta>
+    <ruta id="15">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>2</nodo>
+        <nodo>21</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>157</salida_deposito>
+      <energia_salida>737</energia_salida>
+      <periodos_carga primero="0" ultimo="40" total="41"/>
+    </ruta>
+  </rutas>
+</solucion>

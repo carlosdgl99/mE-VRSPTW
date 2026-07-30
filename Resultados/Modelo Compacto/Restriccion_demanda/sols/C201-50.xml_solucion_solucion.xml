@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<solucion instancia="C201-50.xml_solucion" modelo="mE-VRPTW">
+  <costo_total>549.7</costo_total>
+  <rutas total="6">
+    <ruta id="1">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>22</nodo>
+        <nodo>27</nodo>
+        <nodo>30</nodo>
+        <nodo>12</nodo>
+        <nodo>13</nodo>
+        <nodo>9</nodo>
+        <nodo>11</nodo>
+        <nodo>10</nodo>
+        <nodo>51</nodo>
+      </secuencia>
+      <salida_deposito>293</salida_deposito>
+      <energia_salida>1580</energia_salida>
+      <periodos_carga primero="0" ultimo="114" total="115"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>6</nodo>
+        <nodo>32</nodo>
+        <nodo>33</nodo>
+        <nodo>31</nodo>
+        <nodo>35</nodo>
+        <nodo>37</nodo>
+        <nodo>38</nodo>
+        <nodo>39</nodo>
+        <nodo>36</nodo>
+        <nodo>51</nodo>
+      </secuencia>
+      <salida_deposito>755</salida_deposito>
+      <energia_salida>1600</energia_salida>
+      <periodos_carga primero="0" ultimo="123" total="124"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>20</nodo>
+        <nodo>24</nodo>
+        <nodo>29</nodo>
+        <nodo>34</nodo>
+        <nodo>28</nodo>
+        <nodo>26</nodo>
+        <nodo>23</nodo>
+        <nodo>25</nodo>
+        <nodo>21</nodo>
+        <nodo>51</nodo>
+      </secuencia>
+      <salida_deposito>284</salida_deposito>
+      <energia_salida>1497</energia_salida>
+      <periodos_carga primero="0" ultimo="89" total="90"/>
+    </ruta>
+    <ruta id="11">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>49</nodo>
+        <nodo>40</nodo>
+        <nodo>44</nodo>
+        <nodo>46</nodo>
+        <nodo>45</nodo>
+        <nodo>50</nodo>
+        <nodo>47</nodo>
+        <nodo>43</nodo>
+        <nodo>42</nodo>
+        <nodo>41</nodo>
+        <nodo>48</nodo>
+        <nodo>51</nodo>
+      </secuencia>
+      <salida_deposito>1220</salida_deposito>
+      <energia_salida>1598</energia_salida>
+      <periodos_carga primero="0" ultimo="121" total="122"/>
+    </ruta>
+    <ruta id="13">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>18</nodo>
+        <nodo>19</nodo>
+        <nodo>16</nodo>
+        <nodo>14</nodo>
+        <nodo>15</nodo>
+        <nodo>17</nodo>
+        <nodo>8</nodo>
+        <nodo>51</nodo>
+      </secuencia>
+      <salida_deposito>1990</salida_deposito>
+      <energia_salida>1596</energia_salida>
+      <periodos_carga primero="0" ultimo="120" total="121"/>
+    </ruta>
+    <ruta id="14">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>5</nodo>
+        <nodo>2</nodo>
+        <nodo>1</nodo>
+        <nodo>7</nodo>
+        <nodo>3</nodo>
+        <nodo>4</nodo>
+        <nodo>51</nodo>
+      </secuencia>
+      <salida_deposito>293</salida_deposito>
+      <energia_salida>1241</energia_salida>
+      <periodos_carga primero="0" ultimo="68" total="69"/>
+    </ruta>
+  </rutas>
+</solucion>

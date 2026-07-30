@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<solucion instancia="RC107-25.xml_solucion" modelo="mE-VRPTW">
+  <costo_total>435.2</costo_total>
+  <rutas total="5">
+    <ruta id="6">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>11</nodo>
+        <nodo>10</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>78</salida_deposito>
+      <energia_salida>1169</energia_salida>
+      <periodos_carga primero="0" ultimo="64" total="65"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>6</nodo>
+        <nodo>7</nodo>
+        <nodo>8</nodo>
+        <nodo>4</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>194</salida_deposito>
+      <energia_salida>1373</energia_salida>
+      <periodos_carga primero="0" ultimo="76" total="77"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>25</nodo>
+        <nodo>23</nodo>
+        <nodo>21</nodo>
+        <nodo>18</nodo>
+        <nodo>19</nodo>
+        <nodo>20</nodo>
+        <nodo>22</nodo>
+        <nodo>24</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>81</salida_deposito>
+      <energia_salida>1411</energia_salida>
+      <periodos_carga primero="0" ultimo="80" total="81"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>12</nodo>
+        <nodo>14</nodo>
+        <nodo>17</nodo>
+        <nodo>16</nodo>
+        <nodo>15</nodo>
+        <nodo>13</nodo>
+        <nodo>9</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>91</salida_deposito>
+      <energia_salida>1506</energia_salida>
+      <periodos_carga primero="0" ultimo="90" total="91"/>
+    </ruta>
+    <ruta id="11">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>2</nodo>
+        <nodo>5</nodo>
+        <nodo>3</nodo>
+        <nodo>1</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>171</salida_deposito>
+      <energia_salida>1468</energia_salida>
+      <periodos_carga primero="0" ultimo="86" total="87"/>
+    </ruta>
+  </rutas>
+</solucion>

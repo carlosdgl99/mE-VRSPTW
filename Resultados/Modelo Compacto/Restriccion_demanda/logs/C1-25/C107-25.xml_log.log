@@ -1,0 +1,96 @@
+
+Gurobi 13.0.2 (linux64) logging started Tue Jun 30 07:36:23 2026
+
+Set parameter LogFile to value "src/Resultados/Restriccion demanda/logs/C107-25.xml_log.log"
+Set parameter Threads to value 4
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Rocky Linux 9.7 (Blue Onyx)")
+
+CPU model: QEMU Virtual CPU version 2.5+, instruction set [SSE2]
+Thread count: 8 physical cores, 8 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  7200
+Threads  4
+
+Optimize a model with 133275 rows, 79860 columns and 965115 nonzeros (Min)
+Model fingerprint: 0xdd5fe7cb
+Model has 9105 linear objective coefficients
+Variable types: 17550 continuous, 62310 integer (62295 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+04]
+  Objective range  [1e+00, 6e+01]
+  Bounds range     [1e+00, 2e+03]
+  RHS range        [1e+00, 4e+04]
+
+Presolve removed 42048 rows and 120 columns (presolve time = 5s)...
+Presolve removed 42048 rows and 120 columns
+Presolve time: 6.43s
+Presolved: 91227 rows, 79740 columns, 409320 nonzeros
+Variable types: 375 continuous, 79365 integer (69165 binary)
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.3372000e+03   2.925425e+03   4.847237e+10     12s
+   24830    2.9378430e+02   3.169952e+02   6.677139e+09     15s
+   28763    2.9993372e+02   1.312562e+02   3.837638e+09     20s
+   33038    2.6416842e+02   9.129609e+01   3.598640e+09     25s
+   35774    2.6314051e+02   7.791996e+01   7.099060e+09     30s
+   37997    2.8939426e+02   6.623311e+01   2.594263e+09     35s
+   40391    2.8971684e+02   4.026077e+01   9.654750e+09     40s
+   42957    2.9389272e+02   1.681962e+01   6.335649e+09     45s
+   45180    2.8776156e+02   9.856587e+00   1.768174e+09     50s
+   47403    2.8311142e+02   3.598414e+00   1.090996e+09     55s
+   49626    2.8316569e+02   1.015608e+00   6.849753e+08     60s
+   52704    1.9503834e+02   0.000000e+00   4.500660e+03     65s
+Warning: 1 variables dropped from basis
+Warning: switch to quad precision
+   53730    1.9130699e+02   0.000000e+00   3.613574e+04     70s
+   54684    1.9120000e+02   6.575380e+01   0.000000e+00     75s
+   55804    1.9120000e+02   7.063528e-01   0.000000e+00     80s
+   56299    1.9120000e+02   0.000000e+00   0.000000e+00     83s
+Concurrent spin time: 23.22s (can be avoided by choosing Method=3)
+
+Solved with primal simplex
+
+Root relaxation: objective 1.912000e+02, 56299 iterations, 96.56 seconds (51.19 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  191.20000    0 2741          -  191.20000      -     -  138s
+     0     0  191.20000    0 3633          -  191.20000      -     -  190s
+     0     0  191.20000    0 3424          -  191.20000      -     -  190s
+H    0     0                     238.7000000  191.20000  19.9%     -  193s
+     0     0  191.20000    0 5355  238.70000  191.20000  19.9%     -  194s
+H    0     0                     238.5000000  191.20000  19.8%     -  202s
+H    0     0                     226.5000000  191.20000  15.6%     -  202s
+H    0     0                     223.3000000  191.20000  14.4%     -  202s
+H    0     0                     221.4000000  191.20000  13.6%     -  202s
+H    0     0                     191.3000000  191.20000  0.05%     -  215s
+     0     0  191.20000    0 6330  191.30000  191.20000  0.05%     -  223s
+     0     0  191.20000    0 5555  191.30000  191.20000  0.05%     -  226s
+     0     0  191.20000    0 4969  191.30000  191.20000  0.05%     -  230s
+
+Cutting planes:
+  Learned: 134
+  Gomory: 3
+  Cover: 290
+  Implied bound: 15
+  Clique: 295
+  MIR: 257
+  StrongCG: 5
+  RLT: 30
+  Relax-and-lift: 214
+  BQP: 215
+
+Explored 1 nodes (102121 simplex iterations) in 321.03 seconds (110.03 work units)
+Thread count was 4 (of 8 available processors)
+
+Solution count 6: 191.3 221.4 223.3 ... 238.7
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.913000000000e+02, best bound 1.913000000000e+02, gap 0.0000%

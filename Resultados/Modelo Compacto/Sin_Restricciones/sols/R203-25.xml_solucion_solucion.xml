@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<solucion instancia="R203-25.xml_solucion" modelo="mE-VRPTW">
+  <costo_total>442.7</costo_total>
+  <rutas total="5">
+    <ruta id="4">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>6</nodo>
+        <nodo>5</nodo>
+        <nodo>17</nodo>
+        <nodo>16</nodo>
+        <nodo>14</nodo>
+        <nodo>13</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>350</salida_deposito>
+      <energia_salida>1430</energia_salida>
+      <periodos_carga primero="0" ultimo="82" total="83"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>2</nodo>
+        <nodo>15</nodo>
+        <nodo>23</nodo>
+        <nodo>22</nodo>
+        <nodo>21</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>92</salida_deposito>
+      <energia_salida>1401</energia_salida>
+      <periodos_carga primero="0" ultimo="79" total="80"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>4</nodo>
+        <nodo>25</nodo>
+        <nodo>24</nodo>
+        <nodo>12</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>756</salida_deposito>
+      <energia_salida>1600</energia_salida>
+      <periodos_carga primero="0" ultimo="122" total="123"/>
+    </ruta>
+    <ruta id="11">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>7</nodo>
+        <nodo>11</nodo>
+        <nodo>19</nodo>
+        <nodo>8</nodo>
+        <nodo>18</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>349</salida_deposito>
+      <energia_salida>1561</energia_salida>
+      <periodos_carga primero="0" ultimo="107" total="108"/>
+    </ruta>
+    <ruta id="15">
+      <secuencia>
+        <nodo>0</nodo>
+        <nodo>3</nodo>
+        <nodo>9</nodo>
+        <nodo>20</nodo>
+        <nodo>10</nodo>
+        <nodo>1</nodo>
+        <nodo>26</nodo>
+      </secuencia>
+      <salida_deposito>564</salida_deposito>
+      <energia_salida>1588</energia_salida>
+      <periodos_carga primero="0" ultimo="117" total="118"/>
+    </ruta>
+  </rutas>
+</solucion>

@@ -1,0 +1,98 @@
+
+Gurobi 13.0.2 (linux64) logging started Sat Jun 20 20:12:54 2026
+
+Set parameter LogFile to value "src/Resultados/Restriccion cota global/logs/C107-25.xml_log.log"
+Set parameter Threads to value 4
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Rocky Linux 9.7 (Blue Onyx)")
+
+CPU model: QEMU Virtual CPU version 2.5+, instruction set [SSE2]
+Thread count: 8 physical cores, 8 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  7200
+Threads  4
+
+Optimize a model with 133152 rows, 79860 columns and 542115 nonzeros (Min)
+Model fingerprint: 0x3a0f49e7
+Model has 9105 linear objective coefficients
+Variable types: 17550 continuous, 62310 integer (62295 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+04]
+  Objective range  [1e+00, 6e+01]
+  Bounds range     [1e+00, 2e+03]
+  RHS range        [1e+00, 4e+04]
+
+Presolve removed 41925 rows and 120 columns
+Presolve time: 2.38s
+Presolved: 91227 rows, 79740 columns, 409320 nonzeros
+Variable types: 375 continuous, 79365 integer (69165 binary)
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   17046    6.0480908e+02   4.716535e+02   6.859434e+09      5s
+   26083    2.9995303e+02   1.154898e+02   1.166153e+10     10s
+   33434    2.9013376e+02   4.655153e+01   2.283951e+09     15s
+   39438    2.6876335e+02   2.327508e+00   1.483153e+11     20s
+   44561    2.3984008e+02   0.000000e+00   5.439401e+03     25s
+   49361    2.1047101e+02   0.000000e+00   4.195234e+05     30s
+   53319    1.9120000e+02   7.731630e+00   0.000000e+00     35s
+   53529    1.9120000e+02   0.000000e+00   0.000000e+00     36s
+Concurrent spin time: 7.60s (can be avoided by choosing Method=3)
+
+Solved with primal simplex
+
+Root relaxation: objective 1.912000e+02, 53529 iterations, 39.64 seconds (33.91 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  191.20000    0 5001          -  191.20000      -     -   60s
+     0     0  191.20000    0 5036          -  191.20000      -     -   60s
+     0     0  191.20000    0 6482          -  191.20000      -     -   73s
+     0     0  191.20000    0 6815          -  191.20000      -     -   80s
+     0     0  191.20000    0 6357          -  191.20000      -     -   81s
+     0     0  191.20000    0 2992          -  191.20000      -     -   92s
+H    0     0                     295.8000000  191.20000  35.4%     -  121s
+H    0     0                     223.3000000  191.20000  14.4%     -  139s
+H    0     0                     222.6000000  191.20000  14.1%     -  139s
+H    0     0                     221.4000000  191.20000  13.6%     -  139s
+     0     0  191.20000    0 3807  221.40000  191.20000  13.6%     -  140s
+     0     0  191.20000    0 3734  221.40000  191.20000  13.6%     -  141s
+     0     0  191.20000    0 6489  221.40000  191.20000  13.6%     -  147s
+     0     0  191.20000    0 6489  221.40000  191.20000  13.6%     -  188s
+H    0     0                     211.5000000  191.20000  9.60%     -  189s
+     0     0  191.20000    0 4891  211.50000  191.20000  9.60%     -  189s
+     0     0  191.20000    0 3542  211.50000  191.20000  9.60%     -  193s
+     0     0  191.20000    0 3542  211.50000  191.20000  9.60%     -  193s
+     0     0  191.20000    0 3542  211.50000  191.20000  9.60%     -  217s
+H    0     0                     191.3000000  191.20000  0.05%     -  217s
+     0     0  191.20000    0 3443  191.30000  191.20000  0.05%     -  218s
+     0     0  191.20000    0 3682  191.30000  191.20000  0.05%     -  221s
+     0     0 infeasible    0       191.30000  191.30000  0.00%     -  221s
+
+Cutting planes:
+  Gomory: 2
+  Lift-and-project: 1
+  Cover: 243
+  Implied bound: 513
+  Clique: 134
+  MIR: 226
+  StrongCG: 8
+  Flow cover: 12
+  GUB cover: 4
+  Zero half: 2
+  RLT: 57
+  Relax-and-lift: 246
+  BQP: 1
+
+Explored 1 nodes (190061 simplex iterations) in 221.99 seconds (169.22 work units)
+Thread count was 4 (of 8 available processors)
+
+Solution count 6: 191.3 211.5 221.4 ... 295.8
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.913000000000e+02, best bound 1.913000000000e+02, gap 0.0000%
