@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<solucion instancia="R205-25.xml" heuristica="Heuristica_3">
+  <costo_total>353.33</costo_total>
+  <rutas total="6">
+    <ruta id="1">
+      <secuencia>26,13,6,5,16,14,15,2,0</secuencia>
+      <arcos total="8">371,183,140,429,386,413,77,2</arcos>
+      <costo>87.11</costo>
+      <energia_consumida>1557</energia_consumida>
+      <tiempo_partida>274.99999999999994</tiempo_partida>
+      <carga_capacidad>106</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="109"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>26,1,10,11,19,7,18,0</secuencia>
+      <arcos total="7">54,278,304,505,225,467,28</arcos>
+      <costo>72.02</costo>
+      <energia_consumida>1448</energia_consumida>
+      <tiempo_partida>436.09999999999997</tiempo_partida>
+      <carga_capacidad>72</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="110" ultimo="196"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>26,23,22,21,0</secuencia>
+      <arcos total="4">609,584,563,33</arcos>
+      <costo>42.7</costo>
+      <energia_consumida>1264</energia_consumida>
+      <tiempo_partida>450.9</tiempo_partida>
+      <carga_capacidad>58</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="197" ultimo="269"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>26,20,9,3,12,0</secuencia>
+      <arcos total="5">531,271,108,317,18</arcos>
+      <costo>55.36</costo>
+      <energia_consumida>1315</energia_consumida>
+      <tiempo_partida>516</tiempo_partida>
+      <carga_capacidad>57</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="270" ultimo="345"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>26,17,8,0</secuencia>
+      <arcos total="3">456,247,11</arcos>
+      <costo>43.14</costo>
+      <energia_consumida>1233</energia_consumida>
+      <tiempo_partida>660.8</tiempo_partida>
+      <carga_capacidad>11</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="346" ultimo="416"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>26,24,25,4,0</secuencia>
+      <arcos total="4">621,626,130,5</arcos>
+      <costo>53</costo>
+      <energia_consumida>1124</energia_consumida>
+      <tiempo_partida>950</tiempo_partida>
+      <carga_capacidad>28</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="417" ultimo="481"/>
+    </ruta>
+  </rutas>
+</solucion>

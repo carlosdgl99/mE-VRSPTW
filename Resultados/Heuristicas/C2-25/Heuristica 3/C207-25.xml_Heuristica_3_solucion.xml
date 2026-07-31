@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<solucion instancia="C207-25.xml" heuristica="Heuristica_3">
+  <costo_total>199.66</costo_total>
+  <rutas total="4">
+    <ruta id="1">
+      <secuencia>26,4,3,7,1,2,5,0</secuencia>
+      <arcos total="7">135,106,203,45,68,137,6</arcos>
+      <costo>47.559999999999995</costo>
+      <energia_consumida>1233</energia_consumida>
+      <tiempo_partida>316.9</tiempo_partida>
+      <carga_capacidad>90</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="71"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>26,6,24,0</secuencia>
+      <arcos total="3">201,638,39</arcos>
+      <costo>29.52</costo>
+      <energia_consumida>838</energia_consumida>
+      <tiempo_partida>641</tiempo_partida>
+      <carga_capacidad>30</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="72" ultimo="120"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>26,12,14,16,15,19,18,23,22,20,0</secuencia>
+      <arcos total="10">332,362,411,389,483,467,622,597,531,32</arcos>
+      <costo>65.3</costo>
+      <energia_consumida>1588</energia_consumida>
+      <tiempo_partida>773.2</tiempo_partida>
+      <carga_capacidad>180</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="121" ultimo="240"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>26,13,17,25,9,11,10,8,21,0</secuencia>
+      <arcos total="9">353,435,687,265,291,273,223,537,33</arcos>
+      <costo>57.28</costo>
+      <energia_consumida>1451</energia_consumida>
+      <tiempo_partida>2273.8</tiempo_partida>
+      <carga_capacidad>160</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="241" ultimo="328"/>
+    </ruta>
+  </rutas>
+</solucion>

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<solucion instancia="C208-25.xml" heuristica="Heuristica_2">
+  <costo_total>237.94</costo_total>
+  <rutas total="5">
+    <ruta id="1">
+      <secuencia>26,6,24,22,20,0</secuencia>
+      <arcos total="5">207,598,557,503,32</arcos>
+      <costo>30.92</costo>
+      <energia_consumida>888</energia_consumida>
+      <tiempo_partida>582.6</tiempo_partida>
+      <carga_capacidad>60</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="52"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>26,3,4,7,1,2,5,0</secuencia>
+      <arcos total="7">123,124,211,46,69,142,6</arcos>
+      <costo>48.199999999999996</costo>
+      <energia_consumida>1298</energia_consumida>
+      <tiempo_partida>625.5</tiempo_partida>
+      <carga_capacidad>90</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="53" ultimo="127"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>26,21,25,9,13,17,18,19,23,0</secuencia>
+      <arcos total="9">519,647,253,314,410,438,459,585,37</arcos>
+      <costo>86.46000000000001</costo>
+      <energia_consumida>1558</energia_consumida>
+      <tiempo_partida>2035.5</tiempo_partida>
+      <carga_capacidad>160</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="128" ultimo="236"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>26,12,14,16,15,0</secuencia>
+      <arcos total="5">311,339,386,366,25</arcos>
+      <costo>49.8</costo>
+      <energia_consumida>1419</energia_consumida>
+      <tiempo_partida>2327</tiempo_partida>
+      <carga_capacidad>110</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="237" ultimo="320"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>26,11,10,8,0</secuencia>
+      <arcos total="4">285,261,229,11</arcos>
+      <costo>22.560000000000002</costo>
+      <energia_consumida>688</energia_consumida>
+      <tiempo_partida>3021.4</tiempo_partida>
+      <carga_capacidad>40</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="321" ultimo="361"/>
+    </ruta>
+  </rutas>
+</solucion>

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<solucion instancia="C105-25.xml" heuristica="Heuristica_3">
+  <costo_total>186.97</costo_total>
+  <rutas total="5">
+    <ruta id="1">
+      <secuencia>26,12,14,16,15,13,20,0</secuencia>
+      <arcos total="7">264,313,353,336,289,476,33</arcos>
+      <costo>55.3</costo>
+      <energia_consumida>1464</energia_consumida>
+      <tiempo_partida>152.8</tiempo_partida>
+      <carga_capacidad>150</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="89"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>26,9,8,7,3,5,0</secuencia>
+      <arcos total="6">207,173,147,57,95,8</arcos>
+      <costo>24.9</costo>
+      <energia_consumida>725</energia_consumida>
+      <tiempo_partida>178.9</tiempo_partida>
+      <carga_capacidad>70</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="90" ultimo="132"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>26,19,18,17,0</secuencia>
+      <arcos total="4">455,422,388,30</arcos>
+      <costo>45.199999999999996</costo>
+      <energia_consumida>1363</energia_consumida>
+      <tiempo_partida>262.7</tiempo_partida>
+      <carga_capacidad>50</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="133" ultimo="210"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>26,21,22,23,25,24,0</secuencia>
+      <arcos total="6">498,502,509,575,548,40</arcos>
+      <costo>27.21</costo>
+      <energia_consumida>523</energia_consumida>
+      <tiempo_partida>268</tiempo_partida>
+      <carga_capacidad>100</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="211" ultimo="242"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>26,1,2,4,6,11,10,0</secuencia>
+      <arcos total="7">43,45,86,133,239,218,16</arcos>
+      <costo>34.36</costo>
+      <energia_consumida>842</energia_consumida>
+      <tiempo_partida>543.3</tiempo_partida>
+      <carga_capacidad>90</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="243" ultimo="291"/>
+    </ruta>
+  </rutas>
+</solucion>

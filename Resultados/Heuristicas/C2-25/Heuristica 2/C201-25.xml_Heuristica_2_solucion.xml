@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<solucion instancia="C201-25.xml" heuristica="Heuristica_2">
+  <costo_total>246.57</costo_total>
+  <rutas total="5">
+    <ruta id="1">
+      <secuencia>26,12,14,16,19,18,23,24,20,0</secuencia>
+      <arcos total="9">248,268,303,356,341,468,509,402,32</arcos>
+      <costo>64.2</costo>
+      <energia_consumida>1594</energia_consumida>
+      <tiempo_partida>284</tiempo_partida>
+      <carga_capacidad>130</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="123"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>26,9,25,13,17,15,5,0</secuencia>
+      <arcos total="7">216,516,258,320,286,147,6</arcos>
+      <costo>69.53</costo>
+      <energia_consumida>1516</energia_consumida>
+      <tiempo_partida>293.9</tiempo_partida>
+      <carga_capacidad>150</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="124" ultimo="217"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>26,6,22,0</secuencia>
+      <arcos total="3">185,415,35</arcos>
+      <costo>30.22</costo>
+      <energia_consumida>925</energia_consumida>
+      <tiempo_partida>293.9</tiempo_partida>
+      <carga_capacidad>40</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="218" ultimo="271"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>26,4,3,7,1,2,0</secuencia>
+      <arcos total="6">124,99,187,44,64,2</arcos>
+      <costo>47.26</costo>
+      <energia_consumida>1228</energia_consumida>
+      <tiempo_partida>475.79999999999995</tiempo_partida>
+      <carga_capacidad>80</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="272" ultimo="342"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>26,21,8,10,11,0</secuencia>
+      <arcos total="5">406,205,218,226,17</arcos>
+      <costo>35.36</costo>
+      <energia_consumida>786</energia_consumida>
+      <tiempo_partida>2962.4</tiempo_partida>
+      <carga_capacidad>60</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="343" ultimo="388"/>
+    </ruta>
+  </rutas>
+</solucion>

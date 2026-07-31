@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<solucion instancia="C105-50.xml" heuristica="Heuristica_2">
+  <costo_total>384.07</costo_total>
+  <rutas total="10">
+    <ruta id="1">
+      <secuencia>51,23,26,28,30,29,32,33,0</secuencia>
+      <arcos total="8">898,1057,1147,1230,1185,1312,1371,56</arcos>
+      <costo>63.9</costo>
+      <energia_consumida>1245</energia_consumida>
+      <tiempo_partida>168.5</tiempo_partida>
+      <carga_capacidad>130</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="72"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>51,11,10,8,7,3,5,0</secuencia>
+      <arcos total="7">513,442,360,302,112,196,8</arcos>
+      <costo>29.46</costo>
+      <energia_consumida>793</energia_consumida>
+      <tiempo_partida>175.49999999999997</tiempo_partida>
+      <carga_capacidad>80</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="73" ultimo="119"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>51,50,48,45,46,42,43,0</secuencia>
+      <arcos total="7">1947,1933,1869,1902,1719,1791,76</arcos>
+      <costo>31.58</costo>
+      <energia_consumida>860</energia_consumida>
+      <tiempo_partida>204.5</tiempo_partida>
+      <carga_capacidad>90</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="120" ultimo="169"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>51,27,25,20,0</secuencia>
+      <arcos total="4">1128,1009,825,33</arcos>
+      <costo>19.009999999999998</costo>
+      <energia_consumida>541</energia_consumida>
+      <tiempo_partida>251</tiempo_partida>
+      <carga_capacidad>60</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="170" ultimo="202"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>51,49,47,44,40,41,0</secuencia>
+      <arcos total="6">1937,1910,1839,1583,1638,72</arcos>
+      <costo>32.82</costo>
+      <energia_consumida>840</energia_consumida>
+      <tiempo_partida>359.4</tiempo_partida>
+      <carga_capacidad>50</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="203" ultimo="251"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>51,1,2,4,6,9,0</secuencia>
+      <arcos total="6">94,96,179,276,409,14</arcos>
+      <costo>31.86</costo>
+      <energia_consumida>839</energia_consumida>
+      <tiempo_partida>718.9999999999999</tiempo_partida>
+      <carga_capacidad>80</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="252" ultimo="300"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>51,21,22,0</secuencia>
+      <arcos total="3">874,878,36</arcos>
+      <costo>15.11</costo>
+      <energia_consumida>412</energia_consumida>
+      <tiempo_partida>1010.9</tiempo_partida>
+      <carga_capacidad>40</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="301" ultimo="325"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>51,12,14,16,15,13,0</secuencia>
+      <arcos total="6">526,599,646,624,551,22</arcos>
+      <costo>49.900000000000006</costo>
+      <energia_consumida>1420</energia_consumida>
+      <tiempo_partida>248.2</tiempo_partida>
+      <carga_capacidad>140</carga_capacidad>
+      <cargador>2</cargador>
+      <periodos_carga primero="1" ultimo="84"/>
+    </ruta>
+    <ruta id="9">
+      <secuencia>51,34,36,39,38,37,35,31,24,0</secuencia>
+      <arcos total="9">1417,1459,1535,1512,1482,1430,1268,943,40</arcos>
+      <costo>65.23</costo>
+      <energia_consumida>1472</energia_consumida>
+      <tiempo_partida>253.8</tiempo_partida>
+      <carga_capacidad>140</carga_capacidad>
+      <cargador>2</cargador>
+      <periodos_carga primero="85" ultimo="174"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>51,19,18,17,0</secuencia>
+      <arcos total="4">785,733,685,30</arcos>
+      <costo>45.199999999999996</costo>
+      <energia_consumida>1363</energia_consumida>
+      <tiempo_partida>262.7</tiempo_partida>
+      <carga_capacidad>50</carga_capacidad>
+      <cargador>2</cargador>
+      <periodos_carga primero="175" ultimo="252"/>
+    </ruta>
+  </rutas>
+</solucion>
