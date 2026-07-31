@@ -1,5 +1,4 @@
 # mE-VRSPTW
-# mE-VRSPTW
 
 Este repositorio contiene el código fuente, las instancias de prueba y los resultados computacionales desarrollados en el marco del proyecto de tesis sobre el **problema de enrutamiento de vehículos eléctricos con ventanas de tiempo y programación de recargas nocturnas (mE-VRSPTW)**.
 
