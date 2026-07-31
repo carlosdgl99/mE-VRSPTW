@@ -10,7 +10,7 @@ import time
 random.seed(7)
 num=10
 
-
+# Función para construir el grafo de incompatibilidad entre clientes según ventanas de tiempo 
 def grafo_incompatibilidad(clientes, ventanas, tiempos, indices):
     incompatibilidad = {i: set() for i in clientes}
 
@@ -42,6 +42,7 @@ def grafo_incompatibilidad(clientes, ventanas, tiempos, indices):
 
     return incompatibilidad
 
+# Función para calcular el ángulo polar de un cliente respecto al depósito
 def angulo_polar(deposito, cliente):
     dx = cliente[0] - deposito[0]
     dy = cliente[1] - deposito[1]
@@ -49,53 +50,7 @@ def angulo_polar(deposito, cliente):
     # convertir a [0, 2π]
     return angulo % (2 * math.pi)
 
-def sweep(deposito, clientes, demandas, capacidad, alpha):
-    orden = sorted(
-        clientes.keys(),
-        key=lambda c: angulo_polar(deposito, clientes[c])
-    )
-
-    rutas = []
-    n = len(orden)
-
-    for inicio in range(n):
-        ruta_actual = []
-        carga_actual = 0
-        visitados = set()
-
-        for i in range(n):
-            cliente = orden[(inicio + i) % n]
-
-            if cliente in visitados:
-                break
-
-            demanda = demandas[cliente]
-
-            if carga_actual + demanda <= capacidad * alpha:
-                # cliente entra normalmente
-                ruta_actual.append(cliente)
-                carga_actual += demanda
-                visitados.add(cliente)
-
-            else:
-                # violador se agrega al final de la ruta actual
-                ruta_actual.append(cliente)
-                carga_actual += demanda
-                visitados.add(cliente)
-
-                rutas.append((ruta_actual,math.ceil(carga_actual / capacidad)))
-
-                # nueva ruta empieza vacía
-                # el siguiente cliente del for la inicializa
-                ruta_actual = []
-                carga_actual = 0
-
-        # última ruta
-        if ruta_actual:
-            rutas.append((ruta_actual,math.ceil(carga_actual / capacidad)))
-
-    return rutas
-
+# Función inversa para determinar el número de periodos necesarios según la energía acumulada
 def funcion_inversa(e):
     energia_acumulada = 0
     for t in N.keys():
@@ -104,8 +59,8 @@ def funcion_inversa(e):
             return t+1
     return max(N.keys())
 
-
-def construir_rutas(Clientes, iter, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q):
+# Heurística 1: Construcción de rutas
+def Heuristica_1(Clientes, iter, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q):
     
     solucion=[]
 
@@ -188,7 +143,8 @@ def construir_rutas(Clientes, iter, arcos_entrada, grafo_inc, energia, min_energ
         
     return solucion
 
-def construir_rutas_alterna(Clientes, iter, ventana, arcos_entrada, grafo_inc,
+# Heurística 3: Construcción de rutas 
+def Heuristica_3(Clientes, iter, ventana, arcos_entrada, grafo_inc,
                               energia, min_energy_to, min_cost_from, min_cost_to,
                               c, tiempo, d, P, Q, indices):
 
@@ -420,7 +376,8 @@ def construir_rutas_alterna(Clientes, iter, ventana, arcos_entrada, grafo_inc,
 
     return solucion_final
 
-def construir_rutas_sweep(C, iter, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
+# Heurística 2: Construcción de rutas con barrido angular
+def Heuristica_2(C, iter, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
                     energia, min_energy_to, min_cost_from, c, tiempo, d, P, Q):
     posibles_soluciones=[]
     nodos_ordenados = sorted([j for j in C],key=lambda x: angulo_polar(coord_dep, coord_clientes[x]),
@@ -525,107 +482,23 @@ def construir_rutas_sweep(C, iter, coord_dep, coord_clientes, arcos_entrada, gra
 
     return posibles_soluciones
 
-def unir_rutas(funcion,ruta1, ruta2, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q):
+# Función para mejorar rutas combinando dos rutas existentes
+def mejorar_rutas(funcion,ruta1, ruta2, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q):
     
     nodos = [i for i in set(ruta1[0] + ruta2[0]) if i in C]
 
-    if funcion == "defecto":
-        # costo = float('inf')
-        # solucion = []
-
-        for i in range(1):
-
-            #estado=False
-            nuevas_rutas=[]
-            Nvisit = random.sample(nodos, len(nodos))  # prueba con hasta 10 inicios aleatorios
-            #Nvisit = sorted(nodos, key=lambda x: ventana[DEPOSITO_FUENTE][1] - 2*ventana[x][0], reverse=True)  # ordenados por ventana
-            while(len(Nvisit)>0):
-                inicio = Nvisit.pop(0)
-                
-                # la ruta empieza en el sumidero 
-                ruta_actual = [DEPOSITO_SUMIDERO, inicio]
-                arcos_actuales = [min_cost_from[inicio][1]] #arco de menor costo desde el depósito sumidero al cliente inicio
-                energia_ruta = E - energia[inicio, DEPOSITO_SUMIDERO, min_cost_from[inicio][1]]
-                costo_ruta = min_cost_from[inicio][0]*0.1
-                tiempo_ruta = min(ventana[DEPOSITO_SUMIDERO][1] - tiempo[inicio, DEPOSITO_SUMIDERO, min_cost_from[inicio][1]], ventana[inicio][1])
-                capacidad_ruta = Q - d[inicio]
-                nodo_actual = inicio
-            
-                while nodo_actual != DEPOSITO_FUENTE:
-                    vecinos_ordenados = sorted(
-                        [(tail, k) for tail, k in arcos_entrada[nodo_actual] if tail in Nvisit],
-                        key=lambda x:  c[x[0],nodo_actual,x[1]]+min_cost_to[x[0]][0]*0.1)
-                    #
-                    mejor_vecino = None
-                    for vecino, arco in vecinos_ordenados:
-                        if vecino not in Nvisit:
-                            continue
-
-                        energia_necesaria = energia[vecino, nodo_actual, arco]
-                        energia_p= energia_ruta - energia_necesaria - min_energy_to[vecino][0]
-                        periodos_necesarios = funcion_inversa(energia_p)
-                        tiempo_regreso = tiempo[DEPOSITO_FUENTE, vecino, min_energy_to.get(vecino, (float('inf'),))[1]]
-                        
-                        tiempo_llegada = tiempo_ruta - tiempo[vecino, nodo_actual, arco]
-                        tiempo_servicio = min(tiempo_llegada, ventana[vecino][1])
-
-                        tiempo_regreso = tiempo[DEPOSITO_FUENTE, vecino, min_energy_to.get(vecino, (float('inf'),))[1]]
-                        if (vecino not in grafo_inc.get(nodo_actual, set()) and energia_p > 0 and
-                            tiempo_servicio - tiempo_regreso >= periodos_necesarios 
-                            and tiempo_servicio >= ventana[vecino][0] and
-                            #tiempo_llegada<=ventana[vecino][1] and
-                            capacidad_ruta - d.get(vecino, 0) >= 0 ):
-                            mejor_vecino = (vecino, arco)
-                            break
-
-                    if mejor_vecino:
-                        vecino, arco = mejor_vecino
-                        ruta_actual.append(vecino)
-                        arcos_actuales.append(arco)
-                        energia_ruta -= energia[vecino, nodo_actual, arco]
-                        costo_ruta += c[vecino, nodo_actual, arco]
-                        tiempo_llegada = tiempo_ruta - tiempo[vecino, nodo_actual, arco]
-                        tiempo_ruta = min(tiempo_llegada, ventana[vecino][1])
-                        capacidad_ruta -= d.get(vecino, 0)
-                        Nvisit.remove(vecino)
-                        nodo_actual = vecino
-                    else:
-                        if nodo_actual == DEPOSITO_SUMIDERO:
-                            break  # no se pudo avanzar desde el sumidero, esta ruta no es válida
-                        if energia_ruta - energia[ DEPOSITO_FUENTE,nodo_actual, min_cost_to[nodo_actual][1]] > 0 and tiempo_ruta - tiempo[DEPOSITO_FUENTE, nodo_actual, min_cost_to[nodo_actual][1]] >= len(P):
-                            arco_retorno = min_cost_to[nodo_actual][1]
-                        else:
-                            arco_retorno = min_energy_to[nodo_actual][1]
-
-                        ruta_actual.append(DEPOSITO_FUENTE)
-                        arcos_actuales.append(arco_retorno)
-                        energia_ruta -= energia[DEPOSITO_FUENTE, nodo_actual, arco_retorno]
-                        costo_ruta += c[DEPOSITO_FUENTE, nodo_actual, arco_retorno]
-                        tiempo_ruta -= tiempo[DEPOSITO_FUENTE, nodo_actual, arco_retorno]
-                        nuevas_rutas.append((ruta_actual, arcos_actuales, costo_ruta,
-                                            energia_ruta, tiempo_ruta, capacidad_ruta))
-                        break
-                
-                else:
-                    nuevas_rutas.append((ruta_actual, arcos_actuales, costo_ruta,
-                                                energia_ruta, tiempo_ruta, capacidad_ruta))
-            
-            # if sum(r[2] for r in nuevas_rutas) < costo:
-            #     costo = sum(r[2] for r in nuevas_rutas)
-            #     solucion = nuevas_rutas
-   
-    elif funcion == "construir_rutas":
-        nuevas_rutas = construir_rutas(nodos, 1, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
+    if funcion == "Heuristica_1":
+        nuevas_rutas = Heuristica_1(nodos, 1, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
                                         energia, min_energy_to, min_cost_from, min_cost_to,
                                         c, tiempo, d, P, Q)[0]
-    elif funcion == "construir_rutas_alterna":
-        nuevas_rutas = construir_rutas_alterna(nodos, 1, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
+    elif funcion == "Heuristica_3":
+        nuevas_rutas = Heuristica_3(nodos, 1, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
                                         energia, min_energy_to, min_cost_from, min_cost_to,
                                         c, tiempo, d, P, Q, indices)[0]
-    elif funcion == "construir_rutas_sweep":
-        nuevas_rutas = construir_rutas_sweep(nodos, 1, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
-                                        energia, min_energy_to, min_cost_from, c,
-                                        tiempo, d, P, Q)[0]
+    elif funcion == "Heuristica_2":
+        nuevas_rutas = Heuristica_2(nodos, 1, coord_dep, coord_clientes, arcos_entrada, grafo_inc,
+                                        energia, min_energy_to, min_cost_from, min_cost_to,
+                                        c, tiempo, d, P, Q)[0]
     
     estado = False 
 
@@ -636,6 +509,7 @@ def unir_rutas(funcion,ruta1, ruta2, arcos_entrada, grafo_inc, energia, min_ener
     else:
         return [ruta1, ruta2], estado
 
+# Función para asignación greedy de cargadores a rutas generadas por la heurística
 def asignacion_cargadores_GA(rutas, C, CR, n, c, energia, tiempo, ventana, E, B, numT):
     asignacion = True
     rutas_completas = []
@@ -718,11 +592,7 @@ def asignacion_cargadores_GA(rutas, C, CR, n, c, energia, tiempo, ventana, E, B,
     #rutas que no pudieron asignarse a ningún cargador
     no_asignadas = [r for r in rutas if r not in procesada]
 
-    
-    factible = verificar_factibilidad(rutas_completas, A, A0, A1, C, VT, P, R,
-        ventana, tiempo, energia, d, c, N, E, Q, T_max)
-
-    if  factible>0 or no_asignadas:
+    if  no_asignadas:
         asignacion=False
     else:
         asignacion=True
@@ -730,6 +600,7 @@ def asignacion_cargadores_GA(rutas, C, CR, n, c, energia, tiempo, ventana, E, B,
     costo_rutas = sum(r[2] for r in rutas_completas)
     return rutas_completas, costo_rutas, asignacion
 
+# Función para asignación exacta de cargadores a rutas generadas por la heurística
 def asignacion_cargadores_exacta(rutas, C, CR, n, c, energia, tiempo, ventana, E, B):
     #=========================================================================
     # CREACIÓN DEL MODELO
@@ -879,6 +750,7 @@ def asignacion_cargadores_exacta(rutas, C, CR, n, c, energia, tiempo, ventana, E
 
     return m.Status, tiempo
 
+# Funciones para leer instancias desde archivos XML
 def get_int(parent, tag, default=0):
     if parent is None:
         return default
@@ -891,6 +763,7 @@ def get_float(parent, tag, default=0.0):
     value = parent.findtext(tag)
     return float(value) if value is not None else default
 
+# Función para leer una instancia desde un archivo XML
 def read_instance(xml_path):
     tree = ET.parse(xml_path)
     root = tree.getroot()
@@ -982,3 +855,298 @@ def read_instance(xml_path):
         requests[req_id] = node_id
 
     return info, nodes, arcs, fleet, requests
+
+# =====================================================
+# Construcción de la instancia y definición de conjuntos y parámetros
+# =====================================================
+
+if __name__ == "__main__":
+    info, nodes, arcs, fleet, requests= read_instance("direccion_del_archivo.xml")
+
+    
+    # conjunto de clientes C
+    C = gp.tuplelist(i for i, data in nodes.items() if data["type"] == 1)
+
+    # número de clientes K
+    n = len(C)
+
+    # número de vehículos disponibles
+    numR = 20
+
+    #número de cargadores disponibles
+    numB=info["num_chargers"]
+
+    # número de periodos de carga por cargador
+    numT = fleet["last_charging_period"] - fleet["first_charging_period"] + 1
+
+    # capacidad de los vehículos
+    Q = fleet["capacity"]
+
+    # cantidad de energía maxima de las baterias
+    E = fleet["energy_capacity"]
+
+    #Tiempo mimno de salida del depósito
+    T_min=nodes[fleet["departure_node"]]["tw_start"]/10
+
+    #Tiempo máximo de llegada al depósito
+    T_max=nodes[fleet["arrival_node"]]["tw_end"]/10
+
+    # deposito fuente y sumidero como constantes
+    DEPOSITO_FUENTE_CARGA = -1
+    DEPOSITO_FUENTE = fleet["departure_node"]
+    DEPOSITO_SUMIDERO = fleet["arrival_node"]
+
+    # conjunto de nodos clientes C1 (incluye el depósito)
+    C1=gp.tuplelist(C+[DEPOSITO_FUENTE,DEPOSITO_SUMIDERO])
+
+    #Coordenadas de los nodos
+    coord = gp.tupledict({i: (data["x"], data["y"]) for i, data in nodes.items()})
+
+    # conjunto de vehículos R
+    R= gp.tuplelist(r+1 for r in range (numR))
+
+    # conjunto de periodos de carga T
+    T= gp.tuplelist(t+1 for t in range(numT))
+
+    # conjunto de cargadores 
+    B = gp.tuplelist(b+1 for b in range(numB))
+
+    # conjunto de nodos de recarga, y sus índices respectivos
+    CR = gp.tupledict({(t, b): n+2+(b-1)*numT+t-1 for t in T for b in B})
+    CR_inv= gp.tupledict({CR[k]: k for k in CR.keys()})
+    VT = gp.tuplelist(CR.values())
+    VT.sort()
+    # conjunto de nodos V 
+    V = gp.tuplelist(C1 + VT + [DEPOSITO_FUENTE_CARGA])
+
+    # Periodos de recarga necesario para cargar el vehículo
+    P= gp.tuplelist(fleet["inverse_recharging_function"].keys())
+
+    # demandas de nodos clientes 
+    d = gp.tupledict()
+    for i, data in nodes.items():
+        if data["type"] == 1:
+            d[i] = data["load"]
+    # demandas del resto de nodos de recarga
+    for i in VT:
+        d[i]=0
+    # demandas de los depósitos
+    d[DEPOSITO_FUENTE_CARGA]=0
+    d[DEPOSITO_FUENTE]=0
+    d[DEPOSITO_SUMIDERO]=0  
+
+    # ventanas de tiempo en cada cliente
+    ventana= gp.tupledict()
+    for i, data in nodes.items():
+        ventana[i] = (data["tw_start"]/10, data["tw_end"]/10)
+
+    #ventanas de tiempo en nodos de periodo de carga
+    ventana[DEPOSITO_FUENTE_CARGA]=(0,T_max)
+    for i in VT:
+        t=CR_inv[i][0]
+        ventana[i]=(t-1,t-1)
+
+    #Cantidad de energía recargada en cada periodo
+    N= gp.tupledict()
+    N[0]=0
+    for t in range(len(P)-1):
+        N[t+1]=fleet["inverse_recharging_function"][t+1]-fleet["inverse_recharging_function"][t]
+
+    # costos de los arcos
+    c = gp.tupledict()
+    # tiempos de los arcos
+    tiempo = gp.tupledict()
+    # energía consumida en los arcos
+    energia= gp.tupledict()
+      
+    # costos, tiempos y energía entre clientes
+    for (i, j,l), arc_data in arcs.items():
+        c[i, j, l] = arc_data['travel_cost']/10
+        tiempo[i, j, l] = arc_data['travel_time']/10
+        energia[i, j, l] = arc_data['energy_consumption']
+
+    # costos entre nodos de periodo de carga
+    for t in T:
+        for b in B:
+            i=CR[t,b]
+            c[DEPOSITO_FUENTE_CARGA,i,1]=0
+            c[i,DEPOSITO_FUENTE,1]=0
+            if t<numT:
+                c[i,i+1,1]=0
+
+    # tiempos entre nodos de periodo de carga
+    for t in T:
+        for b in B:
+            i=CR[t,b]
+            tiempo[DEPOSITO_FUENTE_CARGA,i,1]=0
+            tiempo[i,DEPOSITO_FUENTE,1]=0
+            if t<numT:
+                tiempo[i,i+1,1]=1
+
+    #Energía entre nodos de periodo de carga
+    for t in T:
+        for b in B:
+            i=CR[t,b]
+            energia[DEPOSITO_FUENTE_CARGA,i,1]=0
+            energia[i,DEPOSITO_FUENTE,1]=0
+            if t<numT:
+                energia[i,i+1,1]=0
+        
+    A = list(c.keys())
+
+    #arcos de salida del depósito            
+    A0 = [(i, j, k) for (i, j, k) in A if j in VT or j == DEPOSITO_FUENTE]
+    A1= [(i,j,k) for(i,j,k) in A if i in C1 and j in C1]
+
+    # definir constante M 
+    M = 200*Q
+
+    #calcular numero minimo de vehículos necesarios
+    n_min=math.ceil(sum(d[i] for i in C)/Q)
+
+    # Calcular la energía minima e id de los arcos con menor consumo energético desde el depósito fuente y hacia el depósito sumidero
+    min_energy_to = {}
+    for (tail, head, id_), data in arcs.items():
+        if tail == DEPOSITO_FUENTE:
+            energy = data["energy_consumption"]
+        
+            if head not in min_energy_to or energy< min_energy_to[head][0]:
+                min_energy_to[head] = (energy, id_)
+        
+    min_energy_from = {}
+    for (tail, head, id_), data in arcs.items():
+        if head == DEPOSITO_SUMIDERO:
+            energy = data["energy_consumption"]
+
+            if tail not in min_energy_from or energy < min_energy_from[tail][0]:
+                min_energy_from[tail] = (energy, id_)
+
+    min_cost_from={}
+    for (tail, head, id_), data in arcs.items():
+        if head == DEPOSITO_SUMIDERO:
+            cost = data["travel_cost"]
+        
+            if tail not in min_cost_from or cost < min_cost_from[tail][0]:
+                min_cost_from[tail] = (cost*0.1, id_)
+
+    min_cost_to={}
+    for (tail, head, id_), data in arcs.items():
+        if tail == DEPOSITO_FUENTE:
+            cost = data["travel_cost"]
+
+            if head not in min_cost_to or cost < min_cost_to[head][0]:
+                min_cost_to[head] = (cost*0.1, id_) 
+
+    #Obtenemos el indice de todos los arcos que conectan un par de nodos
+    indices = {}
+    for (i, j, k) in A1:
+        if i!=DEPOSITO_FUENTE and j!=DEPOSITO_SUMIDERO:
+            if (i, j) not in indices:
+                indices[(i, j)] = []
+            indices[(i, j)].append(k)
+
+    grafo_inc=grafo_incompatibilidad(C,ventana,tiempo,indices)
+    grafo_inc[DEPOSITO_FUENTE]=set()  # El depósito fuente no es incompatible con ningún cliente
+
+    arcos_entrada = {j: [] for j in C1+VT}
+    for (tail, head, k) in A:
+        if head in arcos_entrada:
+            arcos_entrada[head].append((tail, k))
+    
+    arcos_salida = {i: [] for i in C1+VT}
+    for (tail, head, k) in A:
+        if tail in arcos_salida:
+            arcos_salida[tail].append((head, k))
+
+    coord_dep=coord[DEPOSITO_FUENTE]
+    coord_clientes={i:coord[i] for i in C}
+
+
+#================================================
+#         FASE 1: CONSTRUCCIÓN DE RUTAS INICIALES 
+#================================================
+#Elegir entre la heurística 1, 2 o 3 para generar las rutas iniciales
+heuristica="Heuristica_1" # "Heuristica_1", "Heuristica_2" o "Heuristica_3"
+if heuristica == "Heuristica_1":    
+    soluciones=Heuristica_1(C, num, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q)
+elif heuristica == "Heuristica_2":
+    soluciones=Heuristica_2(C, num, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q)
+elif heuristica == "Heuristica_3":
+    soluciones=Heuristica_3(C, num, arcos_entrada, grafo_inc, energia, min_energy_to, min_cost_from, min_cost_to, c, tiempo, d, P, Q, indices)
+#==============================================
+#         FASE 2: MEJORAMIENTO DE RUTAS INICIALES
+#================================================
+soluciones_finales = []
+for solucion in soluciones:
+    mejoro = True
+    solucion_final = solucion # se inicia con la solución generada por la heurística
+    while mejoro:
+        mejoro = False  # resetea en cada iteración
+        rutas_actuales = solucion_final[:]  # copia para iterar sin modificar
+        rutas_fusionadas = set()            # índices de rutas ya fusionadas
+        nuevas_rutas_iter = []
+        for i in range(len(rutas_actuales)):
+            if i in rutas_fusionadas:
+                continue    
+            for j in range(i + 1, len(rutas_actuales)):
+                if j in rutas_fusionadas:
+                    continue
+                ruta1 = rutas_actuales[i]
+                ruta2 = rutas_actuales[j]
+                
+                nuevas_rutas, estado = mejorar_rutas("Heuristica_1",
+                    ruta1, ruta2, arcos_entrada, grafo_inc, energia, min_energy_to,
+                    min_cost_from, min_cost_to,c, tiempo, d, P, Q)
+                                
+                if estado:
+                    # marca ambas rutas como fusionadas
+                    rutas_fusionadas.add(i)
+                    rutas_fusionadas.add(j)
+                    
+                    nuevas_rutas_iter.extend(nuevas_rutas)
+                    mejoro = True
+                    # reinicia el loop exterior con las rutas actualizadas
+                    break
+            if i in rutas_fusionadas:
+                break  # sale también del loop exterior para reiniciar
+        # reconstruye solucion_final: quita fusionadas y agrega nuevas
+        solucion_final = (
+            [r for idx, r in enumerate(rutas_actuales) if idx not in rutas_fusionadas]
+            + nuevas_rutas_iter) 
+    soluciones_finales.append(solucion_final)
+soluciones_finales_ordenadas=sorted(soluciones_finales, key=lambda s: sum(r[2] for r in s))
+
+#================================================
+#         FASE 3: ASIGNACIÓN DE CARGADORES
+#================================================
+
+#Elegir entre la asignación exacta y la asignación greedy 
+asig="greedy" # "exacta" o "greedy"
+costo_solucion = None
+solucion_completa = None
+
+if asig == "greedy":
+    for solucion in soluciones_finales_ordenadas:
+        solucion_completa, costo, asignacion = asignacion_cargadores_GA(
+            solucion, C, CR, n, c, energia, tiempo, ventana, E, B, numT)
+
+        if asignacion:
+            # asignación exitosa en primera instancia
+            costo_solucion = costo
+            break
+        else:
+            # la aignación falló, sigue con la siguiente solución
+            costo_solucion = None
+            solucion_completa = None
+            continue
+elif asig == "exacta":
+    for solucion in soluciones_finales_ordenadas:
+        costo= sum(r[2] for r in solucion) #calcula el costo de la solución sin asignación de cargadores
+        asignacion, tiempo_asignacion= asignacion_cargadores_exacta(solucion, C, CR, n, c, energia, tiempo, ventana, E, B)
+        
+        if asignacion != 2 and asignacion != 13:
+            costo_solucion=None
+            continue
+        else:
+            costo_solucion = costo
+            break  # solo queremos la primera solución completa (la de menor costo)
