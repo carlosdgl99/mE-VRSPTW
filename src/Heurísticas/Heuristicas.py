@@ -8,7 +8,7 @@ import time
 
 
 random.seed(7)
-num=10
+num=1000
 
 # Función para construir el grafo de incompatibilidad entre clientes según ventanas de tiempo 
 def grafo_incompatibilidad(clientes, ventanas, tiempos, indices):
