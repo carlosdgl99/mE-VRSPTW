@@ -14,7 +14,7 @@ La estructura principal del repositorio se organiza de la siguiente manera:
 
 * **`src/`**: contiene el código fuente correspondiente a la implementación del modelo compacto, las heurísticas primales y los procedimientos computacionales utilizados para la resolución del problema.
 * **`data/`**: contiene las instancias y los datos utilizados en los experimentos computacionales.
-* **`Resultados/`**: contiene los resultados obtenidos a partir de la ejecución del modelo compacto y de las heurísticas desarrolladas.
+* **`Resultados/`**: contiene los resultados obtenidos a partir de la ejecución del modelo compacto y de las heurísticas desarrolladas (con 1000 repeticiones).
 * **`README.md`**: contiene la documentación general del proyecto y las instrucciones necesarias para comprender y reproducir los experimentos.
 
 ## Metodología
