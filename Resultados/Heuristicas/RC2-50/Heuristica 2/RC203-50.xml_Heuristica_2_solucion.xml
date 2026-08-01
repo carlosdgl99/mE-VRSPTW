@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<solucion instancia="RC203-50.xml" heuristica="Heuristica_2">
+  <costo_total>599.4</costo_total>
+  <rutas total="10">
+    <ruta id="1">
+      <secuencia>51,41,39,42,43,36,37,0</secuencia>
+      <arcos total="7">1193,1133,1218,1252,1061,1075,66</arcos>
+      <costo>71.98</costo>
+      <energia_consumida>1627</energia_consumida>
+      <tiempo_partida>188.4</tiempo_partida>
+      <carga_capacidad>110</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="1" ultimo="75"/>
+    </ruta>
+    <ruta id="2">
+      <secuencia>51,7,6,2,45,5,3,1,0</secuencia>
+      <arcos total="8">366,299,142,1293,283,193,95,0</arcos>
+      <costo>63.730000000000004</costo>
+      <energia_consumida>1594</energia_consumida>
+      <tiempo_partida>205</tiempo_partida>
+      <carga_capacidad>130</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="76" ultimo="148"/>
+    </ruta>
+    <ruta id="3">
+      <secuencia>51,33,0</secuencia>
+      <arcos total="2">1021,59</arcos>
+      <costo>56.54</costo>
+      <energia_consumida>1798</energia_consumida>
+      <tiempo_partida>272.6</tiempo_partida>
+      <carga_capacidad>10</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="149" ultimo="234"/>
+    </ruta>
+    <ruta id="4">
+      <secuencia>51,25,23,21,48,18,19,20,24,0</secuencia>
+      <arcos total="9">906,855,802,1421,722,736,770,879,41</arcos>
+      <costo>62.82</costo>
+      <energia_consumida>1719</energia_consumida>
+      <tiempo_partida>329.7</tiempo_partida>
+      <carga_capacidad>150</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="235" ultimo="314"/>
+    </ruta>
+    <ruta id="5">
+      <secuencia>51,35,38,40,44,0</secuencia>
+      <arcos total="5">1045,1102,1157,1281,79</arcos>
+      <costo>57.82</costo>
+      <energia_consumida>1705</energia_consumida>
+      <tiempo_partida>425.7</tiempo_partida>
+      <carga_capacidad>90</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="315" ultimo="393"/>
+    </ruta>
+    <ruta id="6">
+      <secuencia>51,46,4,8,0</secuencia>
+      <arcos total="4">1373,247,371,12</arcos>
+      <costo>49.72</costo>
+      <energia_consumida>1420</energia_consumida>
+      <tiempo_partida>572</tiempo_partida>
+      <carga_capacidad>60</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="394" ultimo="459"/>
+    </ruta>
+    <ruta id="7">
+      <secuencia>51,17,13,9,0</secuencia>
+      <arcos total="4">707,566,410,13</arcos>
+      <costo>53.629999999999995</costo>
+      <energia_consumida>1547</energia_consumida>
+      <tiempo_partida>581.5</tiempo_partida>
+      <carga_capacidad>50</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="460" ultimo="530"/>
+    </ruta>
+    <ruta id="8">
+      <secuencia>51,49,22,0</secuencia>
+      <arcos total="3">1453,836,38</arcos>
+      <costo>42.4</costo>
+      <energia_consumida>1165</energia_consumida>
+      <tiempo_partida>584</tiempo_partida>
+      <carga_capacidad>50</carga_capacidad>
+      <cargador>1</cargador>
+      <periodos_carga primero="531" ultimo="584"/>
+    </ruta>
+    <ruta id="9">
+      <secuencia>51,32,30,28,26,27,29,31,34,50,0</secuencia>
+      <arcos total="10">1004,969,939,909,921,949,979,1032,1481,91</arcos>
+      <costo>76.4</costo>
+      <energia_consumida>1956</energia_consumida>
+      <tiempo_partida>291.7</tiempo_partida>
+      <carga_capacidad>170</carga_capacidad>
+      <cargador>2</cargador>
+      <periodos_carga primero="1" ultimo="112"/>
+    </ruta>
+    <ruta id="10">
+      <secuencia>51,10,11,12,14,47,15,16,0</secuencia>
+      <arcos total="8">466,484,530,602,1398,653,674,27</arcos>
+      <costo>64.36</costo>
+      <energia_consumida>1522</energia_consumida>
+      <tiempo_partida>329.8</tiempo_partida>
+      <carga_capacidad>150</carga_capacidad>
+      <cargador>2</cargador>
+      <periodos_carga primero="113" ultimo="182"/>
+    </ruta>
+  </rutas>
+</solucion>
